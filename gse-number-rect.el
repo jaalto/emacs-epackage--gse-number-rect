@@ -2,7 +2,7 @@
 ;;   Summary:     Inserts incremental numbers in a rectangle.  I love this.
 ;;   Author:      Scott Evans <gse@antisleep.com>
 ;;   Home:        http://www.antisleep.com/elisp
-;;   Time-stamp:  <2004.12.22 22:49:54 gse>
+;;   Time-stamp:  <2009-03-21 19:37:33 Jari Aalto (jaalto)>
 ;;
 ;; Commentary:
 ;;   Pretty self-expanatory.  If you have text like:
@@ -87,9 +87,9 @@ gse-number-rectangle-min-width."
     (region-beginning) ; start
     (region-end) ; end
     (if (functionp 'read-number)
-        (read-number "First number [1]: " t "1") ; start-at
+        (read-number "First number [1]: " 1) ; start-at
       (string-to-int (read-string "First number [1]: " nil nil "1"))) ; start-at
-    (read-string "Suffix: " nil 'gse-number-rectangle-history) ; suffix-text
+    (read-string "Suffix: " " " 'gse-number-rectangle-history) ; suffix-text
     current-prefix-arg)) ; prefix
 
   (setq start-at (- start-at 1))
