@@ -2,7 +2,7 @@
 ;;   Summary:     Inserts incremental numbers in a rectangle.  I love this.
 ;;   Author:      Scott Evans <gse@antisleep.com>
 ;;   Home:        http://www.antisleep.com/elisp
-;;   Time-stamp:  <2009-03-21 20:14:13 Jari Aalto (jaalto)>
+;;   Time-stamp:  <2009-03-21 20:19:53 Jari Aalto (jaalto)>
 ;;
 ;; Commentary:
 ;;   Pretty self-expanatory.  If you have text like:
@@ -38,7 +38,6 @@
 ;; Change Log
 ;; ----------
 ;; 2002.04.08 gse Fix off-by-one error in longest computation.
-;;                Add gse-number-rectangle-min-width.
 ;;                Use 'force' parameter for move-to-column.
 ;; 2002.04.08 gse Use read-string if read-number not bound (FSF).
 ;; 2002.04.05 gse Add documentation.
@@ -59,9 +58,7 @@
 
 START-AT specifices the first number to start at.
 FORMAT is format string where %i denotes number.
-If NO-ZERO-PADDING is non-nil, do not padd numbers with leading zeroes.
-
-See variable `gse-number-rectangle-min-width' for zero padding control."
+If NO-ZERO-PADDING is non-nil, do not padd numbers with leading zeroes."
   (interactive
    (list
     (region-beginning)
