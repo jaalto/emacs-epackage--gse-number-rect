@@ -1,0 +1,20 @@
+Package: gse-number-rect
+Section: extensions
+License: GPL-2+
+Depends: emacs (>= 21)
+Status: core-emacs unmaintained
+  note 2010-12-03 the code hasn't been touched since 2006 ;
+Email: Scott Evans <gse@antisleep.com>
+X-Upstream-Homepage: http://antisleep.com
+Bugs:
+Maintainer:
+Vcs-Type: http
+Vcs-Url: http://www.antisleep.com/download/elisp/gse-number-rect.el
+Vcs-Browser:
+Homepage:
+Wiki: http://www.emacswiki.org/emacs/
+Description: enhance rect.el by adding numering rectangles
+ Command M-x gse-number-rectangle numbers rectangles.
+ .
+ This functionaluty is included in core Emacs 24.1 in
+ key binding 'C-x r N'
