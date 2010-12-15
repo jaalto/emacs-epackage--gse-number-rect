@@ -2,7 +2,7 @@ Package: gse-number-rect
 Section: extensions
 License: GPL-2+
 Depends: emacs (>= 21)
-Status: core-emacs unmaintained
+Status: core-emacs-24.1 unmaintained
 Email: Scott Evans <gse@antisleep.com>
 X-Upstream-Homepage: http://antisleep.com
 Bugs:
@@ -15,7 +15,6 @@ Wiki: http://www.emacswiki.org/emacs/
 Description: enhance rect.el by adding numering rectangles
  Command M-x gse-number-rectangle numbers rectangles.
  .
- This functionaluty is included in core Emacs 24.1 in
- key binding 'C-x r N'
- .
  Note 2010-12-03 the code hasn't been touched since 2006.
+ .
+ Included in Emacs 24.1. See key binding C-x r N.
