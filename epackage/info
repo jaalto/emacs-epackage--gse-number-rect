@@ -4,14 +4,15 @@ License: GPL-2+
 Depends: emacs (>= 21)
 Status: core-emacs-24.1 unmaintained
 Email: Scott Evans <gse@antisleep.com>
-X-Upstream-Homepage: http://antisleep.com
 Bugs:
-Maintainer:
+Maintainer: Jari Aalto <jari.aalto@cante.net>
 Vcs-Type: http
 Vcs-Url: http://www.antisleep.com/download/elisp/gse-number-rect.el
 Vcs-Browser:
 Homepage:
 Wiki: http://www.emacswiki.org/emacs/
+Commentary:
+X-Upstream-Homepage: http://antisleep.com
 Description: enhance rect.el by adding numering rectangles
  Command M-x gse-number-rectangle numbers rectangles.
  .
