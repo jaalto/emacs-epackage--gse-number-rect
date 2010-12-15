@@ -3,12 +3,15 @@ Section: extensions
 License: GPL-2+
 Depends: emacs (>= 21)
 Status: core-emacs-24.1 unmaintained
+Compat:
+Maintainer: Jari Aalto <jari.aalto@cante.net>
 Email: Scott Evans <gse@antisleep.com>
 Bugs:
-Maintainer: Jari Aalto <jari.aalto@cante.net>
 Vcs-Type: http
 Vcs-Url: http://www.antisleep.com/download/elisp/gse-number-rect.el
 Vcs-Browser:
+Vcs-User:
+Vcs-Password:
 Homepage:
 Wiki: http://www.emacswiki.org/emacs/
 Commentary:
