@@ -5,20 +5,20 @@ Depends: emacs (>= 21)
 Status: core-emacs-24.1 unmaintained
 Compat:
 Maintainer: Jari Aalto <jari.aalto@cante.net>
-Email: Scott Evans <gse@antisleep.com>
 Bugs:
+Upstream: Scott Evans <gse@antisleep.com>
+Upstream-Bugs:
 Vcs-Type: http
 Vcs-Url: http://www.antisleep.com/download/elisp/gse-number-rect.el
 Vcs-Browser:
 Vcs-User:
 Vcs-Password:
 Homepage:
-Wiki: http://www.emacswiki.org/emacs/
+Wiki:
 Commentary:
 X-Upstream-Homepage: http://antisleep.com
 Description: enhance rect.el by adding numering rectangles
  Command M-x gse-number-rectangle numbers rectangles.
  .
  Note 2010-12-03 the code hasn't been touched since 2006.
- .
  Included in Emacs 24.1. See key binding C-x r N.
