@@ -1,1 +1,1 @@
-(provide 'gse-number-rect-install)
+(provide 'gse-number-rect-epkg-install)

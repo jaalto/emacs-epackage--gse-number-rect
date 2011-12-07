@@ -3,4 +3,4 @@
 (unless (lookup-key global-map "\C-xrN")
   (global-set-key "\C-xrN" 'gse-number-rectangle))
 
-(provide 'gse-number-rect-xactivate)
+(provide 'gse-number-rect-epkg-xactivate)
