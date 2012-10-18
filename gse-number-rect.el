@@ -1,11 +1,28 @@
-;; gse-number-rect.el
-;;   Summary:     Inserts incremental numbers in a rectangle.  I love this.
-;;   Author:      Scott Evans <gse@antisleep.com>
-;;   Home:        http://www.antisleep.com/elisp
-;;   Time-stamp:  <2004.12.22 22:49:54 gse>
+;; gse-number-rect.el -- Inserts incremental numbers in a rectangle.
+;;
+;; Copyright (C)    2006 Scott Evans <gse@antisleep.com>
+;; Keywords:        extensions
+;; Author:          Scott Evans
+;; Maintainer:      Scott Evans
+;;
+;; COPYRIGHT NOTICE
+;;
+;; This program is free software; you can redistribute it and/or modify it
+;; under the terms of the GNU General Public License as published by the Free
+;; Software Foundation; either version 2 of the License, or (at your option)
+;; any later version.
+;;
+;; This program is distributed in the hope that it will be useful, but
+;; WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+;; or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+;; for more details.
+;;
+;; Visit <http://www.gnu.org/copyleft/gpl.html> for more information.
+;;
+;; Time-stamp:  <2006.01.05 14:51:34 gse>
 ;;
 ;; Commentary:
-;;   Pretty self-expanatory.  If you have text like:
+;;  Pretty self-expanatory.  If you have text like:
 ;;     --------------------
 ;;     Some text here
 ;;     Another line here
@@ -20,9 +37,8 @@
 ;;     --------------------
 ;; ...assuming you specified a suffix of " - ".
 ;;
-;; I wanted this functionality for soooooo long.  I find it especially
-;; useful to rename files, like mp3 files (in conjunction with wdired
-;; or gse-rename).
+;; I find it especially useful to rename files in conjunction with
+;; wdired.
 ;;
 ;; Thanks to Juan Leon Lahoz Garcia <juan-leon.lahoz@tecsidel.es>
 ;; for testing and suggestions.
@@ -37,6 +53,8 @@
 ;;---------------------------------------------------------------------------
 ;; Change Log
 ;; ----------
+;; 2009.06.21 gse Add GPL.
+;; 2006.01.05 gse Modify params to support Emacs 22.
 ;; 2002.04.08 gse Fix off-by-one error in longest computation.
 ;;                Add gse-number-rectangle-min-width.
 ;;                Use 'force' parameter for move-to-column.
@@ -87,7 +105,10 @@ gse-number-rectangle-min-width."
     (region-beginning) ; start
     (region-end) ; end
     (if (functionp 'read-number)
-        (read-number "First number [1]: " t "1") ; start-at
+        (condition-case nil
+            (read-number "First number [1]: " t "1")
+          (wrong-number-of-arguments
+           (read-number "First number: " 1)))
       (string-to-int (read-string "First number [1]: " nil nil "1"))) ; start-at
     (read-string "Suffix: " nil 'gse-number-rectangle-history) ; suffix-text
     current-prefix-arg)) ; prefix
